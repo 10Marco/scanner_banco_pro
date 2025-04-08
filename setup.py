@@ -8,6 +8,7 @@ setup(
     install_requires=[
         'pandas',
         'flet>=0.8.0',
+        
     ],
     entry_points={
         'console_scripts': [

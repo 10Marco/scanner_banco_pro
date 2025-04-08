@@ -26,6 +26,7 @@ Scanner de arquivos Java para identificar possíveis acessos inseguros ao banco 
 ## Instalação
 
 ```bash
+python -m scanner_banco.cli --caminho scanner_banco/exemplos_teste --formato csv --saida resultado.csv
 git clone https://github.com/10Marco/scanner_banco_pro.git
 cd scanner_banco_pro
 pip install .

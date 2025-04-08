@@ -1,0 +1,17 @@
+[
+    {
+      "arquivo": "com/example/Teste1.java",
+      "linha": 10,
+      "padrao": "\\.getConnection\\(",
+      "severidade": "alta",
+      "trecho": "getConnection();"
+    },
+    {
+      "arquivo": "com/example/Teste2.java",
+      "linha": 22,
+      "padrao": "\\.createQuery\\(",
+      "severidade": "media",
+      "trecho": "createQuery(\"select * from teste\");"
+    }
+  ]
+  

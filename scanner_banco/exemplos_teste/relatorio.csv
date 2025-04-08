@@ -1,0 +1,3 @@
+arquivo,linha,padrao,severidade,trecho
+com/example/Teste1.java,10,\.getConnection\(,alta,getConnection();
+com/example/Teste2.java,22,\.createQuery\(,media,createQuery("select * from teste");

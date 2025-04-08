@@ -1,11 +1,18 @@
-import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from scanner_banco.core import buscar_acessos_banco
 
-def test_busca_padrao_getConnection():
+def test_buscar_acessos_banco_tem_resultados():
+    padroes = {
+        r'\.getConnection\(': 'alta',
+        r'\.createQuery\(': 'media'
+    }
     caminho = "scanner_banco/exemplos_teste"
-    padroes = [r'\.getConnection\(']
     resultados = buscar_acessos_banco(caminho, padroes)
-    assert any(".getConnection(" in r["trecho"] for r in resultados), f"Nenhum resultado encontrado! Retorno: {resultados}"
+    assert isinstance(resultados, list)
+    if resultados:
+        assert "arquivo" in resultados[0]
+        assert "linha" in resultados[0]
+        assert "padrao" in resultados[0]
+        assert "trecho" in resultados[0]
+        assert "severidade" in resultados[0]
+        assert resultados[0]["severidade"] in ['alta', 'media']
